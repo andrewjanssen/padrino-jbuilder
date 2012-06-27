@@ -26,9 +26,10 @@ Padrino.after_load {
     end
 
     def evaluate(scope, locals)
-      filename = self.file
+      template = self.file.sub(scope.settings.views, "").sub(/^\//, "")
+      preamble = locals.map { |k,v| "#{k} = locals[#{k.inspect}]" }.join("\n") + "\n"
       Jbuilder.encode do |json|
-        scope.instance_eval File.open(filename).read
+        scope.instance_eval(preamble + File.open(self.file).read)
       end
     end
   end

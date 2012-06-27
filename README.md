@@ -1,6 +1,6 @@
 # Padrino::Jbuilder
 
-Adds the jbuilder templating engine to Padrino
+Adds jbuilder template support to Padrino. Awesome.
 
 ## Installation
 
@@ -15,6 +15,10 @@ And then execute:
 Or install it yourself as:
 
     $ gem install padrino-jbuilder
+
+## Usage
+
+Make template files that end in ".jbuilder". Done.
 
 ## Contributing
 
