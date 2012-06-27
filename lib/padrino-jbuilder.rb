@@ -27,7 +27,9 @@ Padrino.after_load {
 
     def evaluate(scope, locals)
       filename = self.file
-      scope.instance_eval File.open(filename).read
+      Jbuilder.encode do |json|
+        scope.instance_eval File.open(filename).read
+      end
     end
   end
 
