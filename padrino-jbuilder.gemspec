@@ -9,7 +9,7 @@ Gem::Specification.new do |gem|
   gem.homepage      = "https://github.com/thecurator/padrino-jbuilder"
 
   gem.add_dependency 'padrino'
-  gem.add_dependency "jbuilder", "0.4.0"
+  gem.add_dependency "jbuilder", "~> 1.0.0"
 
   gem.files         = `git ls-files`.split($\)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
